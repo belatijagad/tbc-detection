@@ -5,7 +5,7 @@ from torchvision.models import (
 )
 
 
-def get_backbone(backbone: str):
+def build_backbone(backbone: str):
     match backbone:
         case "vggnet":
             backbone = vgg19(weights=VGG19_BN_Weights.DEFAULT)
